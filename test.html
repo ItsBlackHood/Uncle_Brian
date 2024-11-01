@@ -1,0 +1,62 @@
+<html>
+<body>
+  <div align="center">
+    <div class="card" id="formCard">
+        <h1 id="headings">Make your reservations now!</h1>
+        <label>Your Name:</label><br>
+        <input type="text" name="name" id="name"><br><br>
+        <label>Contact Number:</label><br>
+        <input type="text" name="contact" id="contact"><br><br>
+        <input type="date" id="date"><br><br>
+        <input type="time" id="time"><br><br>
+        <input type="submit" value="Submit" onclick="reservation()">
+    </div>
+
+    <!-- Placeholder to display submitted data -->
+    <div id="resultCard" style="display:none;">
+        <h2>Reservation Details</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Contact:</strong> <span id="displayContact"></span></p>
+        <p><strong>Date:</strong> <span id="displayDate"></span></p>
+        <p><strong>Time:</strong> <span id="displayTime"></span></p>
+    </div>
+</div>
+
+<script>
+function reservation() {
+    // Get form values
+    var name = document.getElementById('name').value;
+    var contact = document.getElementById('contact').value;
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+
+    // Hide the form
+    document.getElementById('formCard').style.display = 'none';
+
+    // Display the reservation details
+    document.getElementById('displayName').textContent = name;
+    document.getElementById('displayContact').textContent = contact;
+    document.getElementById('displayDate').textContent = date;
+    document.getElementById('displayTime').textContent = time;
+    
+    document.getElementById('resultCard').style.display = 'block';
+
+    // Restore the form after 5 seconds
+    setTimeout(function() {
+        // Clear the displayed values
+        document.getElementById('resultCard').style.display = 'none';
+
+        // Clear form values
+        document.getElementById('name').value = '';
+        document.getElementById('contact').value = '';
+        document.getElementById('date').value = '';
+        document.getElementById('time').value = '';
+
+        // Show the form again
+        document.getElementById('formCard').style.display = 'block';
+    }, 5000);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Uncle Brian </title>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<header style="padding-top: 1px; padding-left: 16px;">
+    <a href="home.html"><img src="logo2.png" width="180px" style="padding-left: 0;"></a>
+</header>
+
+<body>
+<nav class="nav">
+    <a href="home.html">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="location.html">Location</a>
+    <a href="contact us.html" class="active">Contact Us</a>
+</nav>
+<br>
+
+<main>
+<div class="product-grid">
+<div class="product-card" style="border: 1px solid crimson; background-color: rgba(0, 0, 0, 0.353)">
+    <a href="https://www.youtube.com/@yujinisshocked" target="_blank"><img src="youtube.png" class="product-image"></a>
+    <p class="product-name" style="text-align: center;">Youtube</p>
+</div>
+<div class="product-card" style="border: 1px solid crimson; background-color: rgba(0, 0, 0, 0.353)">
+    <a href="https://www.tiktok.com/@yujinisshocked" target="_blank"><img src="tiktok.png" class="product-image"></a>
+    <p class="product-name" style="text-align: center;">Tiktok</p>
+</div>
+<div class="product-card" style="border: 1px solid crimson; background-color: rgba(0, 0, 0, 0.353)">
+    <a href="https://www.instagram.com/b.rian_is_alive/" target="_blank"><img src="instagram.png" class="product-image"></a>
+    <p class="product-name" style="text-align: center;">Instagram</p>
+</div>
+</div>
+
+<br><br>
+
+<div align="center">
+<div class="card2" id="contactcard" style="border: 1px solid crimson;">
+<h1 style="float: right;" id="headings">Contact Us Now!</h1>
+<label>First Name:</label><br>
+<input type="text" name="fname" id="fname"><br><br>
+<label>Last Name:</label><br>
+<input type="text" name="lname" id="lname"><br><br>
+<label>Contact Number:</label><br>
+<input type="text" name="contact" id="contact"><br><br>
+<label>Email Address</label><br>
+<input type="email" name="email" id="email">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" onclick="submit()">
+</div>
+</div>
+
+</main>
+
+<footer class="footer">
+<br><br>
+<img src="banner.png" style="max-width: 100%;">
+</footer>
+
+<script>
+
+function submit() {
+document.getElementById("headings").innerHTML="Submitted! "
+setTimeout (function() {
+    location.reload()
+}, 2000)
+}
+
+
+
+</script>
+</body>
+</html>
