@@ -1,0 +1,127 @@
+<html>
+<head>
+  <meta charset="UTF-8" lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Uncle Brian </title>
+<link rel="stylesheet" href="css.css">
+
+</head>
+
+<header style="padding-top: 1px; padding-left: 16px;">
+    <a href="home.html"><img src="logo2.png" width="180px" style="padding-left: 0;"></a>
+</header>
+
+<body>
+<nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="location.html">Location</a>
+    <a href="contact us.html">Contact Us</a>
+</nav>
+<br>
+
+<main>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+    <img src="s1.png" style="width: 100%;">
+    </div>
+</div>
+<div class="slideshow-container">
+    <div class="mySlides">
+    <img src="s2.png" style="width: 100%;">
+    </div>
+</div>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+    <img src="s3.png" style="width: 100%;">
+    </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<center>
+  <br>
+<video width="55%" autoplay loop>
+  <source src="video.mp4" type="video/mp4">
+</video>
+</center>
+
+<br><br>
+
+<div align="center">
+  <div class="card" id="formcard" style="border: 1px solid crimson;">
+      <h1 id="headings">Make your reservations now!</h1>
+      <label>Your Name:</label><br>
+      <input type="text" name="name" id="name" required><br><br>
+      <label>Contact Number:</label><br>
+      <input type="tel" name="contact" id="contact" required><br><br>
+      <input type="date" id="date" required><br><br>
+      <input type="time" id="time" required><br><br>
+      <input type="submit" onclick="reservation()">
+  </div>
+</div>
+
+<div align="center">
+  <div class="card" id="resultCard" style="display: none; border: 1px solid crimson;">
+  <h1 id="headings">Reservation Made!</h1>
+  <p><strong>Name:</strong> <span id="displayName"></span></p>
+  <p><strong>Contact:</strong> <span id="displayContact"></span></p>
+  <p><strong>Date:</strong> <span id="displayDate"></span></p>
+  <p><strong>Time:</strong> <span id="displayTime"></span></p><br><br>
+  <button name="Back" onclick="location.reload();">Back</button>
+  </div>
+  </div>
+
+<br><br>
+</main>
+
+<footer class="footer">
+<img src="banner.png" style="max-width: 100%;">
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000);
+    }
+
+function reservation() {
+  var name = document.getElementById('name').value;
+  var contact = document.getElementById('contact').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+
+  document.getElementById("formcard").style.display="none"
+
+  document.getElementById('displayName').textContent = name;
+  document.getElementById('displayContact').textContent = contact;
+  document.getElementById('displayDate').textContent = date;
+  document.getElementById('displayTime').textContent = time;
+  
+  document.getElementById('resultCard').style.display="block";
+}
+</script>
+    
+</body>
+</html>

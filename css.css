@@ -1,0 +1,230 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+  margin: 0;
+  background-image: url(malaysia\ bg.png);
+  background-attachment: fixed;
+  background-size: 100%;
+  color: white;
+  cursor: url('cursor.cur'), auto;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.353);
+    height: auto;
+}
+.nav a {
+    color: white;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 25px;
+}
+.nav a:hover {
+    color: crimson;
+}
+.nav a.active {
+    color: white;
+    background-color: crimson;
+    text-decoration: none;
+}
+.nav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.no_padding {
+    padding-left: 10px;
+}
+
+.no_padding h2 {
+    font-size: 50;
+}
+
+.no_padding p {
+    font-size: 25;
+}
+
+.list {
+    margin: 0;
+    left: 5;
+    padding: 0;
+    width: 180px;
+    position: absolute;
+    height: auto;
+    overflow: auto;
+    background-color: azure;
+    padding-left: 10px;
+    color: black;
+}
+.list a {
+    text-decoration: none;
+    color: blue;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    height: 90px;
+}
+
+/* Slideshow Section */
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+  }
+
+@keyframes none {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Slideshow Section End */
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 20%;
+    padding: 70px; 
+    border: 2px solid crimson; 
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.353);
+    margin: 10px; 
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.product-image {
+    width: 100%;
+    height: auto; 
+    max-height: 100%; 
+    object-fit: cover; 
+}
+
+.product-name {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+.product-price {
+    font-size: 1em;
+    color: white;
+    font-style: italic;
+}
+/* End of Product Grid */
+
+@media screen and (max-width: 700px) {
+    .nav a, .nav input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .nav input[type=text] {
+      border: 1px solid #ccc;
+    }
+    body {
+        margin: 0;
+        background-image: url(background-vertical.jpg);
+        background-attachment: fixed;
+        background-size: 100%;
+        color: white;
+      }
+    .product-card {
+        width: 100%; 
+    }
+    .card {
+        width: 100%;
+    }
+    .card h1{
+        font-size: 25px;
+    }
+    .card2 {
+        width: 100%;
+    }
+
+    .card2 h1{
+        font-size: 0px;
+    }
+    iframe {
+        display: none;
+    }
+  }
+
+.reservations {
+    background-color: rgba(0, 0, 0, 0.353);
+    padding-left: 16px;
+}
+
+.card {
+    width: 50%;
+    padding: 70px;
+    margin: 10px; 
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.353);
+}
+
+.card2 {
+    width: 50%;
+    padding: 70px;
+    margin: 0px; 
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.353);
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid crimson;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    border: 1px solid crimson;
+}
+
